@@ -1,16 +1,21 @@
-<!doctype html>
-<html lang="en">
+<?php include_once('./templates/header.php'); ?>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Project : My Schedule with PHP and Bootstrap 5.2</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
+<div class="container">
+  <h2 class="text-center my-4 text-uppercase"> Agenda de Contatos</h2>
+  <ul class="list-group list-group-numbered">
+    <li class="list-group-item d-flex justify-content-between align-items-start">
+      <div class="ms-2 me-auto">
+        <div class="fw-bold">Anderson Martins</div>
+        <i class="ph-phone-bold"> (21) 99289-0362 </i>
+      </div>
+      <a href="" class="text-warning mx-2" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Editar">
+        <i class="ph-pencil-simple-line-bold"></i>
+      </a>
+      <a href="" class="text-danger" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Deletar">
+        <i class="ph-trash-bold"></i>
+      </a>
+    </li>
+  </ul>
+</div>
 
-<body>
-  <h1>Hello, world!</h1>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-
-</html>
+<?php include_once('./templates/footer.php'); ?>
