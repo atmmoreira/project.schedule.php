@@ -11,4 +11,12 @@
 
 <body>
 
+  <?php
+    include_once('./config/crud.php');
+    // Clear message
+    if (isset($_SESSION['message'])) {
+      $printMessage = $_SESSION['message'];
+      $_SESSION['message'] = '';
+    }
+  ?>
   <?php include_once('./templates/menu.php'); ?>
