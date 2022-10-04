@@ -14,7 +14,7 @@
             <div class="fw-bold"><?= $contact['name']; ?></div>
             <i class="ph-phone-bold"> <?= $contact['phone']; ?> </i>
           </div>
-          <a href="" class="text-warning mx-2" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Editar">
+          <a href="./edit.php?id=<?= $contact['id']; ?>" class="text-warning mx-2" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Editar">
             <i class="ph-pencil-simple-line-bold"></i>
           </a>
           <a href="" class="text-danger" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Deletar">
