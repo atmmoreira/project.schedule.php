@@ -27,7 +27,6 @@ if (!empty($data)) {
       echo "Erro: $error";
     }
   } else if ($data["type"] === "edit") {
-    var_dump($data);
 
     $id = $data["id"];
     $name = $data["name"];
@@ -47,6 +46,20 @@ if (!empty($data)) {
     try {
       $stmt->execute();
       $_SESSION['message'] = "Contato editado com sucesso";
+    } catch (PDOException $e) {
+      // Error conection
+      $error = $e->getMessage();
+      echo "Erro: $error";
+    }
+  } else if ($data["type"] === "delete") {
+    $id = $data["id"];
+    $query = "DELETE FROM contacts WHERE id = :id";
+    $stmt = $conn->prepare($query);
+    $stmt->bindParam(":id", $id);
+
+    try {
+      $stmt->execute();
+      $_SESSION['message'] = "Contato apagado com sucesso";
     } catch (PDOException $e) {
       // Error conection
       $error = $e->getMessage();

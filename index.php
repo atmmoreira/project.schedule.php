@@ -17,9 +17,13 @@
           <a href="./edit.php?id=<?= $contact['id']; ?>" class="text-warning mx-2" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Editar">
             <i class="ph-pencil-simple-line-bold"></i>
           </a>
-          <a href="" class="text-danger" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Deletar">
-            <i class="ph-trash-bold"></i>
-          </a>
+          <form action="./config/crud.php" method="POST">
+            <input type="hidden" name="type" value="delete">
+            <input type="hidden" name="id" value="<?= $contact['id']; ?>">
+            <button class="text-danger deletebtn" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Deletar">
+              <i class="ph-trash-bold"></i>
+            </button>
+          </form>
         </li>
       <?php endforeach; ?>
     </ul>
